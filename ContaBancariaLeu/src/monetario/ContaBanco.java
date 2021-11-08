@@ -31,6 +31,7 @@ public class ContaBanco {
 		} else if (t == "CP")
 			this.setSaldo(150);
 		System.out.println("Conta Aberta Parabens");
+		System.out.println("**********************");
 	}
 
 	public void fecharConta() {
