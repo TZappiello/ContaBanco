@@ -4,6 +4,7 @@ public class ContaBanco {
 	// Atributos
 	public String banco;
 	public int numConta;
+	public int numAgencia;
 	protected String tipo;
 	private String dono;
 	private double saldo;
@@ -11,25 +12,27 @@ public class ContaBanco {
 
 	// Metodos
 	public void banco() {
-		System.out.println("Banco: " + this.getBanco());
+		
 	}
 
 	public void estadoAtual() {
 		System.out.println("****************");
-		System.out.println("Conta " + this.getNumConta());
-		System.out.println("Tipo " + this.getTipo());
-		System.out.println("Dono " + this.getDono());
-		System.out.println("Saldo " + this.getSaldo());
-		System.out.println("Status " + this.getStatus());
+		System.out.println("Banco: " + this.getBanco());
+		System.out.println("Conta: " + this.getNumConta());
+		System.out.println("Agencia: "+ "00"+ this.getNumAgencia());
+		System.out.println("Tipo: " + this.getTipo());
+		System.out.println("Dono: " + this.getDono());
+		System.out.println("Saldo: " + this.getSaldo());
+		System.out.println("Status: " + this.getStatus());
 	}
 
 	public void abrirConta(String t) {
-		this.setTipo(t);
-		this.setStatus(true);
-		if (t == "CC") {
-			this.setSaldo(50);
-		} else if (t == "CP")
-			this.setSaldo(150);
+//		this.setTipo(t);
+//		this.setStatus(true);
+//		if (t == "CC") {
+//			this.setSaldo(50);
+//		} else if (t == "CP")
+//			this.setSaldo(150);
 		System.out.println("Conta Aberta Parabens");
 		System.out.println("**********************");
 	}
@@ -136,4 +139,13 @@ public class ContaBanco {
 		this.banco = banco;
 	}
 
+	public int getNumAgencia() {
+		return numAgencia;
+	}
+
+	public void setNumAgencia(int nu) {
+		this.numAgencia = nu;
+	}
+
+	
 }

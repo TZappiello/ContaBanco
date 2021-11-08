@@ -16,11 +16,14 @@ public class MovimentoBanco {
 			
 		p1.setNumConta(ge.nextInt(9999));
 		System.out.println("Numero da Conta: " + p1.getNumConta());
+		
+		p1.setNumAgencia(ge.nextInt(99));
+		System.out.println("Numero da Agencia: " + p1.getNumAgencia());
 		System.out.println("***************");
 		
 		System.out.println("Digite o Nome do Cliente:");
 		p1.setDono(sc.next());
-		
+		System.out.println("***************");
 		
 		System.out.println("Qual tipo de Conta: CC/CP ");
 		p1.abrirConta(sc.next());
@@ -29,14 +32,13 @@ public class MovimentoBanco {
 		System.out.println("Deseja depositar: S=sim N=não ");
 		String res = sc.next();
 		if (res.equalsIgnoreCase("s")) {
-			System.out.println("Quanto deseja depositar ");
+			System.out.println("Quanto deseja depositar R$: ");
 			p1.depositar(sc.nextInt());	
 			sc.nextLine();
 		} 
 
 		
-		p1.banco();
-		p1.estadoAtual();
+			p1.estadoAtual();
 	}
 
 }
